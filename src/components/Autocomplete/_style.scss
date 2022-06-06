@@ -1,0 +1,45 @@
+@import './../../styles/variables';
+@import './../../styles//mixin';
+.newStation-input.auc-isopen{
+    border-bottom: none !important;
+
+}
+.auc-ul{
+    .suggstions-loading-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 75px;
+      }
+    display: none;
+    padding: 3px;
+    // margin-top: -30px;
+    background-color: #fff;
+    width: $input-width/1.5;
+    box-shadow: $input-box-shadow;
+    &.auc-lg{
+        border-radius:$input-border-radius-lg;
+        li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border-radius:$input-border-radius;
+            font-size: $input-font-size/2 !important;  
+            box-sizing: border-box;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+    &.is-open{
+        display: block;
+    }
+
+}
+.item-hightlighted{
+background-color: $primary;
+color: $white;
+}
+.item-hightlighted-disabled{
+    background-color: #c6c6c61a;
+;
+}

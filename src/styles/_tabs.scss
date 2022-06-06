@@ -1,0 +1,56 @@
+@import "_variables";
+@import "_mixin";
+
+
+
+.newStation-tab{
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
+    margin: 0;
+    box-shadow: $menu-box-shadow;
+    .plaintext-tab-item{
+        font-size: $tab-font-size;
+        display: inline-block;
+        list-style: none;
+        padding:$tab-padding-x $tab-padding-y;
+        cursor: pointer;
+        .hover-1 {
+            display: inline-block;
+            border-radius: 3px;
+            padding:5px 10px;
+            background: 
+            linear-gradient($primary 0 0) no-repeat
+            calc(200% - var(--i,0)*100%) 100% / 200% calc(100%*var(--i,0) + .08em);
+            transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - calc(var(--i,0)*.3s));
+          }
+          &.is-active,&.hover-1:hover {
+            --i: 1;
+            color: #fff;
+          }
+    }
+    .tab-content{
+        margin-top:-10px;
+        display: none;
+        float: left;
+        z-index: 999;
+        margin-bottom:$tab-padding-x ;
+        margin-left:$tab-padding-y;
+        width:calc(100% - 1.5rem); /* "-"前后需要空格 */
+        top: 2*$tab-font-size+$tab-padding-x;
+        left: $tab-padding-y;
+    }
+    .open-item-content{
+        display: block;
+    }
+}
+
+.newStation-tab::after {
+    content: '';
+    /*建议加个height:0*/
+    display: block;
+    clear: both;
+    // visibility: hidden;
+}
+
+

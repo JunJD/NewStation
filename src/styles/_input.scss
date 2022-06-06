@@ -1,0 +1,59 @@
+@import '_variables';
+@import '_mixin';
+
+
+.newStation-input{
+    margin-bottom: 30px;
+    width: $input-width;
+    display: flex;
+    align-items: center;
+    svg{
+        width: 35px;
+        opacity: 0.7;
+        color: $primary;
+        margin-left:-30px;
+    }
+    input{
+        width: 100%;
+        outline: none;
+        font:$input-font-weight $input-font-size/$input-line-height $input-font-family;
+        background-color: $input-bg;
+        border-radius:$input-border-radius;
+
+        padding:$input-padding-y  $input-padding-x; 
+        border: $input-border-width solid $input-border-color;
+        box-shadow: $input-box-shadow;
+        transition: $input-transition;
+        &:focus{
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+        outline: 0;
+        box-shadow:  $input-focus-box-shadow;
+        }
+        &::placeholder {
+            color: $input-placeholder-color;
+            opacity: 0.7;
+          }
+        &.input-lg{
+            padding:$input-padding-y-lg $input-padding-x-lg;
+            border-radius:$input-border-radius-lg;
+            font-size: $input-font-size-lg;
+        }
+        &.input-lg{
+            padding:$input-padding-y-sm $input-padding-x-sm;
+            border-radius: $input-border-radius-sm;
+            font-size: $input-font-size-sm;
+        }
+        &.isdisabled{
+            background-color: $input-disabled-bg;
+            border-color:$input-disabled-border-color;
+            cursor:no-drop;
+        }
+        &.svg{
+            box-sizing: border-box;
+            padding-right: 25px;
+        }
+        }
+    
+}
